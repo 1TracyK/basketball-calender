@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import BasketballCalenderForm from './Components/BasketBallCalenderForm/BasketballCalenderForm';
+import BasketballCalenderList from './Components/BasketballCalenderList/BasketballCalenderList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [items, setItems] = useState([
+		{
+			createdAt: 1689374598465,
+			location: 'Los Angelos',
+			team1: 'Lakers',
+			team2: 'Pistons',
+		},
+		{
+			createdAt: 1689374598466,
+			location: 'Detroit',
+			team1: 'Pistons',
+			team2: 'Lakers',
+		},
+	]);
+
+	return (
+		<div className="App">
+			<header className="App-header">
+				<h1>Basketball Calender</h1>
+			</header>
+			<BasketballCalenderForm />
+			<BasketballCalenderList />
+		</div>
+	);
 }
 
 export default App;
