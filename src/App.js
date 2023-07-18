@@ -10,12 +10,14 @@ function App() {
 			location: 'Los Angelos',
 			team1: 'Lakers',
 			team2: 'Pistons',
+			date: '2023-08-11',
 		},
 		{
 			createdAt: 1689374598466,
 			location: 'Detroit',
 			team1: 'Pistons',
 			team2: 'Lakers',
+			date: '2023-10-12',
 		},
 	]);
 
@@ -25,7 +27,7 @@ function App() {
 				<h1>Basketball Calender</h1>
 			</header>
 			<BasketballCalenderForm />
-			<BasketballCalenderList />
+			<BasketballCalenderList items={items} />
 		</div>
 	);
 }
