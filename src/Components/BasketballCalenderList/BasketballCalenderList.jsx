@@ -21,6 +21,7 @@ export default function BasketballCalenderList({ items }) {
 						<th>Location</th>
 						<th>Home</th>
 						<th>Guest</th>
+						<th>Winner</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
