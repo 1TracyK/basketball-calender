@@ -12,6 +12,7 @@ function App() {
 			team1: 'Lakers',
 			team2: 'Pistons',
 			date: '2023-08-11',
+			winner: 'Lakers',
 		},
 		{
 			createdAt: 1689374598466,
@@ -19,6 +20,7 @@ function App() {
 			team1: 'Pistons',
 			team2: 'Lakers',
 			date: '2023-10-12',
+			winner: null,
 		},
 	]);
 

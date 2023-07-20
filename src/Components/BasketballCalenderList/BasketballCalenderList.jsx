@@ -10,6 +10,7 @@ export default function BasketballCalenderList({ items }) {
 			team1={item.team1}
 			team2={item.team2}
 			date={item.date}
+			winner={item.winner}
 		/>
 	));
 	return (
