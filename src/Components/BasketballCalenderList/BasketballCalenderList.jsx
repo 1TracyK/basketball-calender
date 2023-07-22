@@ -1,16 +1,23 @@
 import React from 'react';
 import BasketballCalenderItem from './BasketballCalenderItem';
 import './BasketballCalenderList.css';
-export default function BasketballCalenderList({ items }) {
+export default function BasketballCalenderList({
+	items,
+	updateWinner,
+	deleteItem,
+}) {
 	// eslint-disable-next-line no-unused-vars
 	let ItemListJsx = items.map((item) => (
 		<BasketballCalenderItem
-			key={item.createdAt}
+			key={item.id}
+			id={item.id}
 			location={item.location}
 			team1={item.team1}
 			team2={item.team2}
 			date={item.date}
 			winner={item.winner}
+			updateWinner={updateWinner}
+			deleteItem={deleteItem}
 		/>
 	));
 	return (

@@ -7,7 +7,7 @@ function App() {
 	// eslint-disable-next-line no-unused-vars
 	const [items, setItems] = useState([
 		{
-			createdAt: 1689374598465,
+			id: 1689374598465,
 			location: 'Los Angelos',
 			team1: 'Lakers',
 			team2: 'Pistons',
@@ -15,7 +15,7 @@ function App() {
 			winner: 'Lakers',
 		},
 		{
-			createdAt: 1689374598466,
+			id: 1689374598466,
 			location: 'Detroit',
 			team1: 'Pistons',
 			team2: 'Lakers',
@@ -24,13 +24,21 @@ function App() {
 		},
 	]);
 
+	function updateWinner(id, newWinnerValue) {}
+
+	function deleteItem(id) {}
+
 	return (
 		<div className="App">
 			<header className="App-header">
 				<h1>Basketball Calender</h1>
 			</header>
 			<BasketballCalenderForm />
-			<BasketballCalenderList items={items} />
+			<BasketballCalenderList
+				items={items}
+				updateWinner={updateWinner}
+				deleteItem={deleteItem}
+			/>
 		</div>
 	);
 }
