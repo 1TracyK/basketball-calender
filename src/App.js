@@ -4,7 +4,6 @@ import BasketballCalenderForm from './Components/BasketballCalenderForm/Basketba
 import BasketballCalenderList from './Components/BasketballCalenderList/BasketballCalenderList';
 
 function App() {
-	// eslint-disable-next-line no-unused-vars
 	const [items, setItems] = useState([
 		{
 			id: 1689374598465,
@@ -24,23 +23,33 @@ function App() {
 		},
 	]);
 
-	function updateWinner(id, newWinnerValue) {}
+	function updateWinner(id, newWinnerValue) {
+		let result = [];
+		let newItems = structuredClone(items);
+		for (let item of newItems) {
+			if (item.id === id) {
+				item.winner = newWinnerValue;
+			}
+			result.push(item);
+		}
+		setItems(result);
 
-	function deleteItem(id) {}
+		function deleteItem(id) {}
 
-	return (
-		<div className="App">
-			<header className="App-header">
-				<h1>Basketball Calender</h1>
-			</header>
-			<BasketballCalenderForm />
-			<BasketballCalenderList
-				items={items}
-				updateWinner={updateWinner}
-				deleteItem={deleteItem}
-			/>
-		</div>
-	);
+		return (
+			<div className="App">
+				<header className="App-header">
+					<h1>Basketball Calender</h1>
+				</header>
+				<BasketballCalenderForm />
+				<BasketballCalenderList
+					items={items}
+					updateWinner={updateWinner}
+					deleteItem={deleteItem}
+				/>
+			</div>
+		);
+	}
 }
 
 export default App;
