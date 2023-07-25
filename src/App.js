@@ -23,9 +23,10 @@ function App() {
 		},
 	]);
 
+	// eslint-disable-next-line no-unused-vars
 	function updateWinner(id, newWinnerValue) {
 		let result = [];
-		let newItems = structuredClone(items);
+		let newItems = structuredClone(items); //deep cone
 		for (let item of newItems) {
 			if (item.id === id) {
 				item.winner = newWinnerValue;
@@ -33,23 +34,34 @@ function App() {
 			result.push(item);
 		}
 		setItems(result);
-
-		function deleteItem(id) {}
-
-		return (
-			<div className="App">
-				<header className="App-header">
-					<h1>Basketball Calender</h1>
-				</header>
-				<BasketballCalenderForm />
-				<BasketballCalenderList
-					items={items}
-					updateWinner={updateWinner}
-					deleteItem={deleteItem}
-				/>
-			</div>
-		);
 	}
+
+	function deleteItem(id) {
+		let result = [];
+		let newItems = structuredClone(items); //deep cone
+		for (let item of newItems) {
+			if (item.id === id) {
+				result.push(item);
+			}
+		}
+		setItems(result);
+	}
+
+	return (
+		<div className="App">
+			<header className="App-header">
+				<h1>Basketball Calender</h1>
+			</header>
+			<BasketballCalenderForm />
+			<BasketballCalenderList
+				items={items}
+				updateWinner={updateWinner}
+				deleteItem={deleteItem}
+			/>
+		</div>
+	);
+
+	// return undefined;
 }
 
 export default App;
