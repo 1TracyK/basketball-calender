@@ -37,10 +37,9 @@ function App() {
 	}
 
 	function deleteItem(id) {
-		let result = [];
-		let newItems = structuredClone(items); //deep cone
-		for (let item of newItems) {
-			if (item.id === id) {
+		let result = []; //shallow clonealready  (bcuz w dont dig into the object field)
+		for (let item of items) {
+			if (item.id !== id) {
 				result.push(item);
 			}
 		}
