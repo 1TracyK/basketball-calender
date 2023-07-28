@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/basketball-calender/static/css/main.b323d3fe.css",
-    "main.js": "/basketball-calender/static/js/main.a2e4f946.js",
+    "main.css": "/basketball-calender/static/css/main.27c42db7.css",
+    "main.js": "/basketball-calender/static/js/main.9e3dda4e.js",
     "static/js/787.62914184.chunk.js": "/basketball-calender/static/js/787.62914184.chunk.js",
     "index.html": "/basketball-calender/index.html",
-    "main.b323d3fe.css.map": "/basketball-calender/static/css/main.b323d3fe.css.map",
-    "main.a2e4f946.js.map": "/basketball-calender/static/js/main.a2e4f946.js.map",
+    "main.27c42db7.css.map": "/basketball-calender/static/css/main.27c42db7.css.map",
+    "main.9e3dda4e.js.map": "/basketball-calender/static/js/main.9e3dda4e.js.map",
     "787.62914184.chunk.js.map": "/basketball-calender/static/js/787.62914184.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b323d3fe.css",
-    "static/js/main.a2e4f946.js"
+    "static/css/main.27c42db7.css",
+    "static/js/main.9e3dda4e.js"
   ]
 }
