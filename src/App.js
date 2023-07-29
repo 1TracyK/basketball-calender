@@ -24,6 +24,26 @@ function App() {
 	]);
 
 	// eslint-disable-next-line no-unused-vars
+	function createItem(date, location, home, guest) {
+		console.log(date, location, home, guest);
+
+		setItems((oldItems) => {
+			let newItems = [
+				...oldItems,
+				{
+					id: new Date().getTime(),
+					location,
+					team1: home,
+					team2: guest,
+					date,
+					winner: null,
+				},
+			];
+			newItems.sort((match1, match2) => (match1.date > match2.date ? 1 : -1));
+			return newItems;
+		});
+	}
+	// eslint-disable-next-line no-unused-vars
 	function updateWinner(id, newWinnerValue) {
 		let result = [];
 		let newItems = structuredClone(items); //deep cone
