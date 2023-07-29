@@ -25,8 +25,6 @@ function App() {
 
 	// eslint-disable-next-line no-unused-vars
 	function createItem(date, location, home, guest) {
-		console.log(date, location, home, guest);
-
 		setItems((oldItems) => {
 			let newItems = [
 				...oldItems,
@@ -71,7 +69,7 @@ function App() {
 			<header className="App-header">
 				<h1>Basketball Calender</h1>
 			</header>
-			<BasketballCalenderForm />
+			<BasketballCalenderForm createItem={createItem} />
 			<BasketballCalenderList
 				items={items}
 				updateWinner={updateWinner}
